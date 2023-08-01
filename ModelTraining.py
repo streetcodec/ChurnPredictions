@@ -11,7 +11,7 @@ data = pd.read_csv("customer_data.csv")
 # Converting gender column to one-hot encoded numerical features
 data = pd.get_dummies(data, columns=['gender'], drop_first=True)
 
-# Setting 'churn_status' is the target variable
+# Setting 'churn_status' as the target variable
 X = data.drop(['customer_id', 'churn_status'], axis=1)
 y = data['churn_status']
 
